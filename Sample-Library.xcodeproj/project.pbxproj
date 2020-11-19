@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,13 @@
 		46541BE12566BCB5000D17A9 /* Sample_Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46541BD72566BCB4000D17A9 /* Sample_Library.framework */; };
 		46541BE62566BCB5000D17A9 /* Sample_LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46541BE52566BCB5000D17A9 /* Sample_LibraryTests.swift */; };
 		46541BE82566BCB5000D17A9 /* Sample_Library.h in Headers */ = {isa = PBXBuildFile; fileRef = 46541BDA2566BCB4000D17A9 /* Sample_Library.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46541C092566C080000D17A9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46541C082566C080000D17A9 /* API.swift */; };
+		46541C0D2566C324000D17A9 /* CoinPriceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46541C0C2566C324000D17A9 /* CoinPriceEntity.swift */; };
+		46541C162566C393000D17A9 /* CoinDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46541C152566C393000D17A9 /* CoinDataSource.swift */; };
+		46541C1B2566C3AE000D17A9 /* CoinRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46541C1A2566C3AE000D17A9 /* CoinRepository.swift */; };
+		46541C1F2566C3B8000D17A9 /* CoinRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46541C1E2566C3B8000D17A9 /* CoinRepositoryImpl.swift */; };
+		46541C232566C3D5000D17A9 /* CoinUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46541C222566C3D5000D17A9 /* CoinUseCase.swift */; };
+		46541C2A2566C574000D17A9 /* CoinApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46541C292566C574000D17A9 /* CoinApiService.swift */; };
 		62B9BB61B1A18198671CB0F6 /* Pods_Sample_Library_Sample_LibraryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533F0052541A61363AF0BEE1 /* Pods_Sample_Library_Sample_LibraryTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +39,13 @@
 		46541BE02566BCB5000D17A9 /* Sample-LibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample-LibraryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46541BE52566BCB5000D17A9 /* Sample_LibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_LibraryTests.swift; sourceTree = "<group>"; };
 		46541BE72566BCB5000D17A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46541C082566C080000D17A9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		46541C0C2566C324000D17A9 /* CoinPriceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPriceEntity.swift; sourceTree = "<group>"; };
+		46541C152566C393000D17A9 /* CoinDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataSource.swift; sourceTree = "<group>"; };
+		46541C1A2566C3AE000D17A9 /* CoinRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRepository.swift; sourceTree = "<group>"; };
+		46541C1E2566C3B8000D17A9 /* CoinRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRepositoryImpl.swift; sourceTree = "<group>"; };
+		46541C222566C3D5000D17A9 /* CoinUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinUseCase.swift; sourceTree = "<group>"; };
+		46541C292566C574000D17A9 /* CoinApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinApiService.swift; sourceTree = "<group>"; };
 		50B7E6C625325362BCAB6AC9 /* Pods_Sample_Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sample_Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		533F0052541A61363AF0BEE1 /* Pods_Sample_Library_Sample_LibraryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sample_Library_Sample_LibraryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA550CBC82E88BE89A37D429 /* Pods-Sample-Library.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample-Library.debug.xcconfig"; path = "Target Support Files/Pods-Sample-Library/Pods-Sample-Library.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +106,10 @@
 		46541BD92566BCB4000D17A9 /* Sample-Library */ = {
 			isa = PBXGroup;
 			children = (
+				46541C072566C06C000D17A9 /* Entity */,
+				46541C042566C00D000D17A9 /* DataSource */,
+				46541C032566BFF0000D17A9 /* Repository */,
+				46541BFE2566BFE1000D17A9 /* UseCase */,
 				46541BDA2566BCB4000D17A9 /* Sample_Library.h */,
 				46541BDB2566BCB4000D17A9 /* Info.plist */,
 			);
@@ -107,6 +125,65 @@
 			path = "Sample-LibraryTests";
 			sourceTree = "<group>";
 		};
+		46541BFE2566BFE1000D17A9 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				46541C222566C3D5000D17A9 /* CoinUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		46541C032566BFF0000D17A9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				46541C192566C397000D17A9 /* Coin */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		46541C042566C00D000D17A9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				46541C082566C080000D17A9 /* API.swift */,
+				46541C282566C567000D17A9 /* Coin */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		46541C072566C06C000D17A9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				46541C102566C340000D17A9 /* Coin */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		46541C102566C340000D17A9 /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				46541C0C2566C324000D17A9 /* CoinPriceEntity.swift */,
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
+		46541C192566C397000D17A9 /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				46541C1A2566C3AE000D17A9 /* CoinRepository.swift */,
+				46541C1E2566C3B8000D17A9 /* CoinRepositoryImpl.swift */,
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
+		46541C282566C567000D17A9 /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				46541C152566C393000D17A9 /* CoinDataSource.swift */,
+				46541C292566C574000D17A9 /* CoinApiService.swift */,
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
 		C1D62BC3491FE492EA1CDECA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +192,6 @@
 				40EAF0FEDC1E222537EF2C98 /* Pods-Sample-Library-Sample-LibraryTests.debug.xcconfig */,
 				B27E0488B6DD6FB59BFA0FB2 /* Pods-Sample-Library-Sample-LibraryTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,6 +259,7 @@
 				TargetAttributes = {
 					46541BD62566BCB4000D17A9 = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 					46541BDF2566BCB5000D17A9 = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -294,6 +371,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46541C1B2566C3AE000D17A9 /* CoinRepository.swift in Sources */,
+				46541C092566C080000D17A9 /* API.swift in Sources */,
+				46541C0D2566C324000D17A9 /* CoinPriceEntity.swift in Sources */,
+				46541C162566C393000D17A9 /* CoinDataSource.swift in Sources */,
+				46541C232566C3D5000D17A9 /* CoinUseCase.swift in Sources */,
+				46541C1F2566C3B8000D17A9 /* CoinRepositoryImpl.swift in Sources */,
+				46541C2A2566C574000D17A9 /* CoinApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA550CBC82E88BE89A37D429 /* Pods-Sample-Library.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8FKWTU87FC;
@@ -458,6 +543,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jw.Sample-Library";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -467,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F036F29267D8DAC0757395D6 /* Pods-Sample-Library.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8FKWTU87FC;
@@ -492,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40EAF0FEDC1E222537EF2C98 /* Pods-Sample-Library-Sample-LibraryTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FKWTU87FC;
 				INFOPLIST_FILE = "Sample-LibraryTests/Info.plist";
@@ -511,6 +599,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B27E0488B6DD6FB59BFA0FB2 /* Pods-Sample-Library-Sample-LibraryTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FKWTU87FC;
 				INFOPLIST_FILE = "Sample-LibraryTests/Info.plist";
