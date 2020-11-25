@@ -11,7 +11,7 @@ class CoinRepositoryImpl: CoinRepository {
     
     let coinDataSource = CoinDataSource()
     
-    func getCurrentPrice() -> CoinPriceEntity {
+    func getCurrentPrice() -> CoinPriceEntity? {
         return coinDataSource.getCurrentPrice()
     }
 }

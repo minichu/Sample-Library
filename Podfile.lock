@@ -1,26 +1,41 @@
 PODS:
-  - Alamofire (5.2.1)
-  - Moya (14.0.0):
-    - Moya/Core (= 14.0.0)
+  - Alamofire (5.4.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
   - ObjectMapper (3.5.3)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
 
 DEPENDENCIES:
-  - Moya (~> 14.0)
+  - Moya/RxSwift (~> 14.0)
   - ObjectMapper (~> 3.5)
+  - RxBlocking
+  - RxSwift
+  - RxTest
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
     - ObjectMapper
+    - RxBlocking
+    - RxSwift
+    - RxTest
 
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
 
-PODFILE CHECKSUM: b943d3e2315b25f5ac23b2ae22b48fe00d0d2024
+PODFILE CHECKSUM: 42fdaeed784b997e03db5040207ad7b91b6c4f48
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0

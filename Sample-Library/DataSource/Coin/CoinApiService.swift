@@ -43,6 +43,13 @@ extension CoinApiService: TargetType{
         }
     }
     
+    var validationType: ValidationType {
+        switch self {
+        case .getCurrentPrice:
+            return .successCodes
+        }
+    }
+    
     var headers: [String : String]? {
         switch self {
         case .getCurrentPrice:

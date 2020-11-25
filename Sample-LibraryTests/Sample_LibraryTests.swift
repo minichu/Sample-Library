@@ -5,24 +5,48 @@
 //  Created by hyeondo on 2020/11/19.
 //
 
+import Moya
 import XCTest
+import RxSwift
+import RxBlocking
+import RxTest
 @testable import Sample_Library
 
 class Sample_LibraryTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var coinDataSource: CoinDataSource!
+    var provider: MoyaProvider<CoinApiService>!
+    
+    override func setUp() {
+        super.setUp()
+        coinDataSource = CoinDataSource()
+        provider = MoyaProvider<CoinApiService>()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        super.tearDown()
     }
-
+    
     func testExample() throws {
+        coinDataSource = CoinDataSource()
+        var disposeBag = DisposeBag()
+        var coinPriceEntity: CoinPriceEntity?
+        try? provider.rx.request(.getCurrentPrice)
+            .filterSuccessfulStatusCodes()
+            .mapJSON()
+            .do(onNext:{ json in print(json)})
+            .debug()
+            .toBlocking()
+            .single()
+        type(of: coinPriceEntity)
+        
+//        XCTAssertEqual(coinPriceEntity.chartName, Equatable)
+        
+            
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {

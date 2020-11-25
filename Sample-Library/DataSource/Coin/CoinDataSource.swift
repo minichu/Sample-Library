@@ -7,13 +7,23 @@
 
 import Moya
 import ObjectMapper
+import RxSwift
 
 class CoinDataSource: CoinRepository {
     
-//    fileprivate let provider = MoyaProvider<CoinApiService>()
-    func getCurrentPrice() -> CoinPriceEntity {
-        //will be die
-        return NSObject() as! CoinPriceEntity
+    fileprivate let provider = MoyaProvider<CoinApiService>()
+    func getCurrentPrice() -> CoinPriceEntity? {
+        
+        print("1")
+        var coinPriceEntity: CoinPriceEntity?
+        provider.rx.request(.getCurrentPrice)
+            .asObservable()
+            .filterSuccessfulStatusCodes()
+            .mapJSON()
+            .do(onNext:{ json in print(json)})
+        
+        //will be
+        return coinPriceEntity
     }
     
 }

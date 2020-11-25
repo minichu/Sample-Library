@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol CoinRepository {
-    func getCurrentPrice() -> CoinPriceEntity
+    func getCurrentPrice() -> CoinPriceEntity?
 }

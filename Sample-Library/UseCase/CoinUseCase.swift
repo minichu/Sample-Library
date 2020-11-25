@@ -11,7 +11,7 @@ open class CoinUseCase: CoinRepository {
     
     let coinRepository = CoinRepositoryImpl()
     
-    public func getCurrentPrice() -> CoinPriceEntity {
+    public func getCurrentPrice() -> CoinPriceEntity? {
         return coinRepository.getCurrentPrice()
     }
 }

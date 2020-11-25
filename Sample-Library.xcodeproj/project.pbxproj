@@ -19,6 +19,7 @@
 		46541C232566C3D5000D17A9 /* CoinUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46541C222566C3D5000D17A9 /* CoinUseCase.swift */; };
 		46541C2A2566C574000D17A9 /* CoinApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46541C292566C574000D17A9 /* CoinApiService.swift */; };
 		62B9BB61B1A18198671CB0F6 /* Pods_Sample_Library_Sample_LibraryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533F0052541A61363AF0BEE1 /* Pods_Sample_Library_Sample_LibraryTests.framework */; };
+		959DA0EC256E812200FA8A89 /* Sample_Library.h in Resources */ = {isa = PBXBuildFile; fileRef = 46541BDA2566BCB4000D17A9 /* Sample_Library.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959DA0EC256E812200FA8A89 /* Sample_Library.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
